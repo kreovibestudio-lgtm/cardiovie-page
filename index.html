@@ -88,15 +88,20 @@
         ]
       }
     }
+        
     </script>
     <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-  document.onkeydown = function(e) {
-    if(e.keyCode == 123) return false; // F12
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // Ctrl+Shift+I
-  };
-</script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
 
+  document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 123) e.preventDefault();
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
+    if (e.ctrlKey && e.keyCode === 85) e.preventDefault();
+  });
+</script>
     <style>
         * {
             margin: 0;
@@ -1709,5 +1714,6 @@ Interdiction de réutiliser, copier ou distribuer sans autorisation écrite.
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

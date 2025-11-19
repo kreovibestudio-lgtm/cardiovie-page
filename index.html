@@ -1151,6 +1151,36 @@
             .process-step:nth-child(even) .process-visual {
                 order: initial;
             }
+                .hero-image {
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        position: static;              /* sort du mode "flottant" */
+        transform: none;
+        margin: 0;                     /* pas de décalage vertical */
+        width: 100%;
+        border-radius: 0;              /* comme sur ta capture : bandeau droit */
+        box-shadow: none;              /* optionnel : bandeau clean */
+        padding: 1.5rem 1rem;
+        justify-content: space-between;
+        gap: 1rem;
+        white-space: normal;           /* permet le retour à la ligne du texte */
+    }
+
+    .stat-item {
+        flex: 1;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;             /* légèrement plus petit pour le mobile */
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
         }
         @media (max-width: 768px) {
     .hero-cta {
